@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERATE_DATE -->
+<properties>
+    <parsers>
+        <parser class="org.apache.tika.parser.DefaultParser">
+            <parser-exclude class="org.apache.tika.parser.ocr.TesseractOCRParser" />
+            <parser-exclude class="org.apache.tika.parser.csv.TextAndCSVParser" />
+            <parser-exclude class="org.apache.tika.parser.html.HtmlParser" />
+            <parser-exclude class="org.apache.tika.parser.microsoft.OfficeParser" />
+            <parser-exclude class="org.apache.tika.parser.microsoft.ooxml.OOXMLParser" />
+            <parser-exclude class="org.apache.tika.parser.pdf.PDFParser" />
+        </parser>
+        <parser class="org.apache.tika.parser.csv.TextAndCSVParser">
+            <params>
+                <param name="minConfidence" type="double">TIKA_TEXT_CSV_CONFIDENCE</param>
+            </params>
+        </parser>
+        <parser class="org.apache.tika.parser.html.HtmlParser">
+            <params>
+                <param name="extractScripts" type="bool">TIKA_HTML_EXTRACT_SCRIPTS</param>
+            </params>
+        </parser>
+        <parser class="org.apache.tika.parser.microsoft.OfficeParser">
+            <params>
+                <param name="extractMacros" type="bool">TIKA_OFFICE_EXTRACT_MACROS</param>
+                <param name="includeDeletedContent" type="bool">TIKA_OFFICE_INCLUDE_DELETED_CONTENT</param>
+                <param name="includeMoveFromContent" type="bool">TIKA_OFFICE_INCLUDE_MOVED_CONTENT</param>
+                <param name="includeShapeBasedContent" type="bool">TIKA_OFFICE_INCLUDE_SHAPE_CONTENT</param>
+                <param name="includeHeadersAndFooters" type="bool">TIKA_OFFICE_INCLUDE_HEADER_FOOTER</param>
+                <param name="includeMissingRows" type="bool">TIKA_OFFICE_INCLUDE_MISSING_ROWS</param>
+                <param name="includeSlideNotes" type="bool">TIKA_OFFICE_INCLUDE_SLIDE_NOTES</param>
+                <param name="includeSlideMasterContent" type="bool">TIKA_OFFICE_INCLUDE_SLIDE_MASTER</param>
+                <param name="concatenatePhoneticRuns" type="bool">TIKA_OFFICE_INCLUDE_PHONETIC</param>
+                <param name="useSAXDocxExtractor" type="bool">TIKA_OFFICE_USE_SAX_EXTRACTOR</param>
+                <param name="useSAXPptxExtractor" type="bool">TIKA_OFFICE_USE_SAX_EXTRACTOR</param>
+                <param name="dateOverrideFormat" type="string">TIKA_OFFICE_DATE_OVERRIDE_FORMAT</param>
+            </params>
+        </parser>
+        <parser class="org.apache.tika.parser.microsoft.ooxml.OOXMLParser">
+            <params>
+                <param name="extractMacros" type="bool">TIKA_OFFICE_EXTRACT_MACROS</param>
+                <param name="includeDeletedContent" type="bool">TIKA_OFFICE_INCLUDE_DELETED_CONTENT</param>
+                <param name="includeMoveFromContent" type="bool">TIKA_OFFICE_INCLUDE_MOVED_CONTENT</param>
+                <param name="includeShapeBasedContent" type="bool">TIKA_OFFICE_INCLUDE_SHAPE_CONTENT</param>
+                <param name="includeHeadersAndFooters" type="bool">TIKA_OFFICE_INCLUDE_HEADER_FOOTER</param>
+                <param name="includeMissingRows" type="bool">TIKA_OFFICE_INCLUDE_MISSING_ROWS</param>
+                <param name="includeSlideNotes" type="bool">TIKA_OFFICE_INCLUDE_SLIDE_NOTES</param>
+                <param name="includeSlideMasterContent" type="bool">TIKA_OFFICE_INCLUDE_SLIDE_MASTER</param>
+                <param name="concatenatePhoneticRuns" type="bool">TIKA_OFFICE_INCLUDE_PHONETIC</param>
+                <param name="useSAXDocxExtractor" type="bool">TIKA_OFFICE_USE_SAX_EXTRACTOR</param>
+                <param name="useSAXPptxExtractor" type="bool">TIKA_OFFICE_USE_SAX_EXTRACTOR</param>
+                <param name="dateOverrideFormat" type="string">TIKA_OFFICE_DATE_OVERRIDE_FORMAT</param>
+            </params>
+        </parser>
+        <parser class="org.apache.tika.parser.ocr.TesseractOCRParser">
+            <params>
+                <param name="language" type="string">TIKA_TESSERACT_OCR_LANGUAGE</param>
+                <param name="timeout" type="int">TIKA_TESSERACT_OCR_TIMEOUT</param>
+                <param name="outputType" type="string">txt</param>
+                <param name="enableImageProcessing" type="int">1</param>
+                <param name="applyRotation" type="bool">TIKA_TESSERACT_OCR_AUTO_ROTATE</param>
+            </params>
+        </parser>
+        <parser class="org.apache.tika.parser.pdf.PDFParser">
+            <params>
+                <param name="extractBookmarksText" type="bool">TIKA_PDF_INCLUDE_BOOKMARK</param>
+                <param name="ocrStrategy" type="string">TIKA_PDF_OCR_STRATEGY</param>
+            </params>
+        </parser>
+    </parsers>
+</properties>

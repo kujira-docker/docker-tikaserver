@@ -1,0 +1,7 @@
+version: '3'
+services: 
+    tika:
+        build: .
+        ports: 
+            - 9998:9998
+            
